@@ -1,79 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
 
 :root {
-  /* Bespoke High-End Titanium & Cobalt Design System */
-  --bg-app: #f6f8fb;
+  /* Strict Monochrome Architecture — High-Contrast Minimalist Aesthetic */
+  --bg-app: #f9f9fb;
   --bg-surface: #ffffff;
-  --bg-subtle: #edf2f7;
+  --bg-subtle: #f4f4f5;
   --bg-card: #ffffff;
-  --bg-card-hover: #f8fafc;
-  --bg-sidebar: #0b1329;
+  --bg-card-hover: #f4f4f5;
+  --bg-sidebar: #000000;
   --bg-input: #ffffff;
 
-  --border-color: #e2e8f0;
-  --border-strong: #cbd5e1;
-  --border-focus: #4f46e5;
-  --border-subtle: #f1f5f9;
+  --border-color: #e4e4e7;
+  --border-strong: #09090b;
+  --border-focus: #000000;
+  --border-subtle: #f4f4f5;
 
   /* Typography */
   --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'Fira Code', monospace;
-  --text-main: #0a0f1d;
-  --text-body: #1e293b;
-  --text-muted: #64748b;
-  --text-dim: #94a3b8;
+  --text-main: #000000;
+  --text-body: #18181b;
+  --text-muted: #71717a;
+  --text-dim: #a1a1aa;
 
-  /* Tech Indigo & Cobalt Primary Accent */
-  --primary: #4f46e5;
-  --primary-hover: #4338ca;
-  --primary-light: #eef2ff;
-  --primary-border: #c7d2fe;
-  --primary-gradient: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+  /* Black Accent */
+  --primary: #000000;
+  --primary-hover: #27272a;
+  --primary-light: #f4f4f5;
+  --primary-border: #000000;
+  --primary-gradient: #000000;
 
-  /* State Machine Status Palette */
-  --status-open: #0891b2;
-  --status-open-bg: #ecfeff;
-  --status-open-border: #a5f3fc;
+  /* State Machine Statuses (Strict Black & White) */
+  --status-open: #09090b;
+  --status-open-bg: #f4f4f5;
+  --status-open-border: #d4d4d8;
 
-  --status-progress: #ea580c;
-  --status-progress-bg: #fff7ed;
-  --status-progress-border: #fed7aa;
+  --status-progress: #09090b;
+  --status-progress-bg: #e4e4e7;
+  --status-progress-border: #71717a;
 
-  --status-approval: #7c3aed;
-  --status-approval-bg: #f5f3ff;
-  --status-approval-border: #ddd6fe;
+  --status-approval: #ffffff;
+  --status-approval-bg: #18181b;
+  --status-approval-border: #000000;
 
-  --status-resolved: #059669;
-  --status-resolved-bg: #ecfdf5;
-  --status-resolved-border: #a7f3d0;
+  --status-resolved: #ffffff;
+  --status-resolved-bg: #000000;
+  --status-resolved-border: #000000;
 
-  --status-closed: #475569;
-  --status-closed-bg: #f8fafc;
-  --status-closed-border: #cbd5e1;
+  --status-closed: #71717a;
+  --status-closed-bg: #f4f4f5;
+  --status-closed-border: #d4d4d8;
 
-  --status-blocked: #e11d48;
-  --status-blocked-bg: #fff1f2;
-  --status-blocked-border: #fecdd3;
+  --status-blocked: #ffffff;
+  --status-blocked-bg: #000000;
+  --status-blocked-border: #000000;
 
-  /* Priority Palette */
-  --priority-urgent: #e11d48;
-  --priority-urgent-bg: #fff1f2;
-  --priority-high: #f97316;
-  --priority-high-bg: #fff7ed;
-  --priority-medium: #d97706;
-  --priority-medium-bg: #fffbeb;
-  --priority-low: #64748b;
-  --priority-low-bg: #f8fafc;
+  /* Priorities (Monochrome Contrast) */
+  --priority-urgent: #ffffff;
+  --priority-urgent-bg: #000000;
+  --priority-high: #000000;
+  --priority-high-bg: #e4e4e7;
+  --priority-medium: #27272a;
+  --priority-medium-bg: #f4f4f5;
+  --priority-low: #71717a;
+  --priority-low-bg: #ffffff;
 
-  /* Metrics & Elevation */
+  /* Elevation & Geometry */
   --topbar-height: 64px;
   --sidebar-width: 260px;
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
-  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
-  --shadow-md: 0 4px 8px -2px rgba(15, 23, 42, 0.06), 0 2px 4px -1px rgba(15, 23, 42, 0.03);
-  --shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 *, *::before, *::after {
@@ -94,11 +94,12 @@ body {
 a {
   color: var(--primary);
   text-decoration: none;
-  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
+  transition: all 0.15s ease;
 }
 
 a:hover {
-  color: var(--primary-hover);
+  color: #52525b;
 }
 
 /* Base Layout Structure */
@@ -148,7 +149,7 @@ a:hover {
   font-size: 1.65rem;
   font-weight: 800;
   color: var(--text-main);
-  letter-spacing: -0.025em;
+  letter-spacing: -0.03em;
   line-height: 1.2;
 }
 
@@ -176,12 +177,12 @@ a:hover {
 }
 
 .back-link:hover {
-  color: var(--primary);
+  color: var(--text-main);
 }
 
-/* Utilities */
-.text-danger { color: #e11d48; }
-.text-urgent { color: #e11d48; font-weight: 700; }
+/* Monochrome Utility Classes */
+.text-danger { color: #000000; font-weight: 700; text-decoration: underline; }
+.text-urgent { color: #000000; font-weight: 800; }
 .text-muted { color: var(--text-muted); }
 .text-main { color: var(--text-main); }
 .font-mono { font-family: var(--font-mono); }
