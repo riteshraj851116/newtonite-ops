@@ -1,0 +1,25 @@
+{
+  "name": "newtonite-ops-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Newtonite Ops — Operations Under Pressure Enterprise Full-Stack Monorepo",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "build:frontend": "npm run build --workspace=frontend",
+    "build": "npm run build --workspace=frontend",
+    "test:backend": "npm test --workspace=backend",
+    "test:frontend": "npm test --workspace=frontend",
+    "test": "npm run test:backend && npm run test:frontend",
+    "db:generate": "prisma generate --schema=prisma/schema.prisma",
+    "db:push": "prisma db push --schema=prisma/schema.prisma",
+    "db:seed": "node backend/src/seeds/seed.js"
+  },
+  "devDependencies": {
+    "prisma": "^5.20.0"
+  }
+}
